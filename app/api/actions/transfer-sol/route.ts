@@ -62,7 +62,7 @@ export const GET = async (req: Request) => {
             parameters: [
               {
                 name: "amount", // parameter name in the `href` above
-                label: "Enter the amount of SOL to send", // placeholder of the text input .
+                label: "Enter the amount of SOL to send", // placeholder of the text input
                 required: true,
               },
             ],
@@ -120,7 +120,7 @@ export const POST = async (req: Request) => {
     }
 
     const transaction = new Transaction();
-    transaction.feePayer = account;
+    // transaction.feePayer = account;
 
     transaction.add(
       SystemProgram.transfer({
