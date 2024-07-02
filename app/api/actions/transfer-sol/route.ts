@@ -62,7 +62,7 @@ export const GET = async (req: Request) => {
             parameters: [
               {
                 name: "amount", // parameter name in the `href` above
-                label: "Enter the amount of SOL to send", // placeholder of the text input
+                label: "Enter the amount of SOL to send", // placeholder of the text input .
                 required: true,
               },
             ],
