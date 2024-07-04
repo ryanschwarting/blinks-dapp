@@ -3,7 +3,6 @@ import {
   QuoteGetRequest,
   SwapPostRequest,
 } from "@jup-ag/api";
-import { request } from "http";
 
 export interface JupiterTokenPriceData {
   id: string;
@@ -28,8 +27,8 @@ export interface JupiterTokenMetadata {
   tags: string[];
 }
 
-export const createJupiterApi = () => {
-  const jupiterApi = createJupiterApiClient();
+const jupiterApi = (() => {
+  const jupiterApiClient = createJupiterApiClient();
 
   const getTokenPricesInUsdc = async (tokenIds: string[]) => {
     if (tokenIds.length == 0) {
@@ -58,11 +57,11 @@ export const createJupiterApi = () => {
   };
 
   const quoteGet = async (request: QuoteGetRequest) => {
-    return await jupiterApi.quoteGet(request);
+    return await jupiterApiClient.quoteGet(request);
   };
 
   const swapPost = async (request: SwapPostRequest) => {
-    return await jupiterApi.swapPost(request);
+    return await jupiterApiClient.swapPost(request);
   };
 
   const getTokenList = async (): Promise<JupiterTokenMetadata[]> => {
@@ -120,8 +119,14 @@ export const createJupiterApi = () => {
     swapPost,
     lookupToken,
   };
+})();
+
+export const GET = async (request: Request) => {
+  // Handle GET requests here
+  return new Response(JSON.stringify({ message: "GET request" }));
 };
 
-const jupiterApi = createJupiterApi();
-
-export default jupiterApi;
+export const POST = async (request: Request) => {
+  // Handle POST requests here
+  return new Response(JSON.stringify({ message: "POST request" }));
+};
