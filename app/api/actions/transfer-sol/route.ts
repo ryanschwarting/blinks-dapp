@@ -34,7 +34,7 @@ export const GET = async (req: Request) => {
     ).toString();
 
     const payload: ActionGetResponse = {
-      title: "Donate Solana to Kaktos",
+      title: "Test Blink: Donate Solana",
       // icon: new URL("/solana_devs.jpg", requestUrl.origin).toString(),
       icon: new URL(
         "https://ncxjapaoaeumcr7zfntkk4xzqkfbbsrxnublxh66zfqfdbv6537a.arweave.net/aK6QPA4BKMFH-StmpXL5gooQyjdtAruf3slgUYa-7v4",
