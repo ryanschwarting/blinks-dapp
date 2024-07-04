@@ -147,7 +147,6 @@ export const POST = async (req: Request) => {
     });
 
     // Adding the success message
-    // payload.message = `Transaction successful! Sent ${amount} SOL to ${toPubkey.toBase58()}`;
     // const successMessage = `Transaction successful! Sent ${amount} SOL to ${toPubkey.toBase58()}`;
 
     return Response.json(
