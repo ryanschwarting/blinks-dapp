@@ -40,7 +40,8 @@ export const GET = async (req: Request) => {
         "https://ncxjapaoaeumcr7zfntkk4xzqkfbbsrxnublxh66zfqfdbv6537a.arweave.net/aK6QPA4BKMFH-StmpXL5gooQyjdtAruf3slgUYa-7v4",
         requestUrl.origin
       ).toString(),
-      description: "If you would like to support me please donate! :)",
+      description:
+        "Blockchain Dev | Support my journey into Solana development by making a donation!",
       label: "Transfer", // this value will be ignored since `links.actions` exists
       links: {
         actions: [
