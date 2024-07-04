@@ -46,16 +46,16 @@ export const GET = async (req: Request) => {
       links: {
         actions: [
           {
+            label: "0.1 SOL", // button text
+            href: `${baseHref}&amount=${"0.1"}`,
+          },
+          {
+            label: "0.5 SOL", // button text
+            href: `${baseHref}&amount=${"0.5"}`,
+          },
+          {
             label: "1 SOL", // button text
             href: `${baseHref}&amount=${"1"}`,
-          },
-          {
-            label: "5 SOL", // button text
-            href: `${baseHref}&amount=${"5"}`,
-          },
-          {
-            label: "10 SOL", // button text
-            href: `${baseHref}&amount=${"10"}`,
           },
           {
             label: "Send", // button text
@@ -121,7 +121,6 @@ export const POST = async (req: Request) => {
     }
 
     const transaction = new Transaction();
-    // transaction.feePayer = account;
 
     transaction.add(
       SystemProgram.transfer({
