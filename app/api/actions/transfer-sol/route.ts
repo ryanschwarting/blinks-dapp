@@ -45,19 +45,19 @@ export const GET = async (req: Request) => {
       links: {
         actions: [
           {
-            label: "Send 1 SOL", // button text
+            label: "1 SOL", // button text
             href: `${baseHref}&amount=${"1"}`,
           },
           {
-            label: "Send 5 SOL", // button text
+            label: "5 SOL", // button text
             href: `${baseHref}&amount=${"5"}`,
           },
           {
-            label: "Send 10 SOL", // button text
+            label: "10 SOL", // button text
             href: `${baseHref}&amount=${"10"}`,
           },
           {
-            label: "Send SOL", // button text
+            label: "Send", // button text
             href: `${baseHref}&amount={amount}`, // this href will have a text input
             parameters: [
               {
