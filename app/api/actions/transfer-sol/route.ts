@@ -146,6 +146,9 @@ export const POST = async (req: Request) => {
       // signers: [],
     });
 
+    // Adding the success message
+    // payload.message = `Transaction successful! Sent ${amount} SOL to ${toPubkey.toBase58()}`;
+
     return Response.json(payload, {
       headers: ACTIONS_CORS_HEADERS,
     });

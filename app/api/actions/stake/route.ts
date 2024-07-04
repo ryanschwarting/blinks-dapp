@@ -44,8 +44,8 @@ export const GET = async (req: Request) => {
       links: {
         actions: [
           {
-            label: "Stake 0.1 SOL", // button text
-            href: `${baseHref}&amount=${"0.1"}`,
+            label: "Stake 1 SOL", // button text
+            href: `${baseHref}&amount=${"1"}`,
           },
           {
             label: "Stake 5 SOL", // button text
@@ -180,7 +180,7 @@ function validatedQueryParams(requestUrl: URL) {
     if (requestUrl.searchParams.get("amount")) {
       amount = parseFloat(requestUrl.searchParams.get("amount")!);
     }
-    if (amount <= 0) throw "amount is too small";
+    if (amount <= 0.01) throw "amount is too small";
   } catch (err) {
     throw "Invalid input query parameter: amount";
   }
