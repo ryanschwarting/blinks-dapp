@@ -1,8 +1,8 @@
 {
   "rules": [
     {
-      "pathPattern": "https://monsterverse-dapp.vercel.app/transfer-sol/**",
-      "apiPath": "https://monsterverse-dapp.vercel.app/api/actions/transfer-sol**"
+      "pathPattern": "https://monsterverse-dapp.vercel.app/transfer-sol/*",
+      "apiPath": "https://monsterverse-dapp.vercel.app/api/actions/transfer-sol*"
     }
   ]
 }
