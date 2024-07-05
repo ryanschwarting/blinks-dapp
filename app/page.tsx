@@ -60,31 +60,44 @@ export default function HomePage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@KaktosSol" />
-        <meta name="twitter:title" content="My Awesome Website" />
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Donate Solana</title>
+        <meta name="title" content="Donate Solana" />
         <meta
-          name="twitter:description"
-          content="Welcome to my awesome website, where you can find amazing content and resources."
-        />
-        <meta
-          name="twitter:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}/kaktosSMB.png`}
+          name="description"
+          content="Support my developer journey on the solana blockchain by donating solana!"
         />
 
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="My Awesome Website" />
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://blinks-dapp.vercel.app/" />
+        <meta property="og:title" content="Donate Solana" />
         <meta
           property="og:description"
-          content="Welcome to my awesome website, where you can find amazing content and resources."
+          content="Support my developer journey on the solana blockchain by donating solana!"
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_BASE_URL}/kaktosSMB.png`}
+          content="https://metatags.io/images/meta-tags.png"
         />
-        <meta property="og:url" content="https://example.com" />
-        <meta property="og:type" content="website" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://blinks-dapp.vercel.app/"
+        />
+        <meta property="twitter:title" content="Donate Solana" />
+        <meta
+          property="twitter:description"
+          content="Support my developer journey on the solana blockchain by donating solana!"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+
+        {/* <!-- Meta Tags Generated with https://metatags.io --> */}
       </Head>
       <NavBar />
       <h1>Welcome to my blinks test dapp</h1>
