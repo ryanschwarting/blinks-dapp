@@ -141,7 +141,6 @@ export const POST = async (req: Request) => {
     const payload: ActionPostResponse = await createPostResponse({
       fields: {
         transaction,
-        // message: `Send ${amount} SOL to ${toPubkey.toBase58()}`,
         message: `Thank you for the donation! :) `,
       },
       // note: no additional signers are needed
