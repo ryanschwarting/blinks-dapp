@@ -4,8 +4,9 @@ export const GET = async () => {
   const payload: ActionsJson = {
     rules: [
       {
-        pathPattern: "/*",
-        apiPath: "/api/actions/*",
+        pathPattern: "/donate/*",
+        apiPath:
+          "https://monsterverse-dapp.vercel.app/api/actions/transfer-sol/*",
       },
       {
         pathPattern: "/api/actions/**",
