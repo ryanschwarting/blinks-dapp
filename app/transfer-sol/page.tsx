@@ -21,11 +21,8 @@ export default function Pages() {
   }, []);
 
   return (
-    <section
-      id="action"
-      className="space-y-2 md:space-y-8 p-2 md:p-8 px-4 md:px-20"
-    >
-      <div className="flex justify-between items-center h-[50px] md:h-[100px]">
+    <section id="action" className="space-y-2 md:space-y-8 p-2 px-4 md:px-20">
+      {/* <div className="flex justify-between items-center h-[50px] md:h-[100px]">
         <Image
           src={solanaLogo}
           width={300}
@@ -40,12 +37,12 @@ export default function Pages() {
           alt="SMB"
           className="rounded-full h-[45px] w-[45px] md:w-[100px] md:h-[100px]"
         />
-      </div>
+      </div> */}
       <div className="mx-auto flex w-full md:max-w-[58rem] flex-col items-center space-y-6 text-center pt-4 md:pt-0">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-gray-300">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Donate Solana to Kaktos
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-gray-300 pb-4 md:pb-0">
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-white pb-4 md:pb-0">
           I am embarking on an exciting journey, transitioning from an
           experienced Ethereum developer to diving deep into the Solana
           development ecosystem. Your generous support will empower me to
@@ -77,7 +74,7 @@ export default function Pages() {
       </div>
 
       <div className="mx-auto text-center max-w-[85%] pt-4 md:pt-0">
-        <p className="text-gray-300 leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="text-white leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           View the{" "}
           <Link
             href={`${siteConfig.links.github}/app${apiPath}/route.ts`}
@@ -93,7 +90,7 @@ export default function Pages() {
 
       <div className="flex flex-col items-center justify-center group-hover:border-primary rounded-lg p-6 shadow-lg">
         <div className="pb-4 ">
-          <h3 className="text-gray-300 text-xl font-semibold space-y-3">
+          <h3 className="text-white text-xl font-semibold space-y-3">
             Action Endpoint
           </h3>
         </div>

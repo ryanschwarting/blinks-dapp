@@ -8,6 +8,7 @@ import {
   ShieldIcon,
   WalletIcon,
 } from "lucide-react";
+import { Hero } from "@/components/Hero";
 
 const actionCards: Array<{
   title: string;
@@ -84,8 +85,8 @@ export default function HomePage() {
         ></meta>
         <meta property="og:type" content="website"></meta>
       </Head>
-      <NavBar />
-      <h1>Welcome to my blinks test dapp</h1>
+      {/* <NavBar /> */}
+      <Hero />
     </div>
   );
 }
