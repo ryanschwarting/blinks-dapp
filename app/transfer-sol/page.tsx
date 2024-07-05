@@ -74,7 +74,9 @@ export default function Pages() {
 
       <div className="flex flex-col items-center justify-center group-hover:border-primary rounded-lg p-6 shadow-lg">
         <div className="pb-4 ">
-          <h3 className="text-xl font-semibold space-y-3">Action Endpoint</h3>
+          <h3 className="text-gray-300 text-xl font-semibold space-y-3">
+            Action Endpoint
+          </h3>
         </div>
         <div className="pt-4 space-y-2">
           <p className="text-muted-foreground">

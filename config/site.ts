@@ -7,7 +7,7 @@ export const siteConfig = {
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
     twitter: "https://twitter.com/kaktosSol",
-    github: "https://github.com/ryanschwarting/monsterverse-dapp/tree/main/",
+    github: "https://github.com/ryanschwarting/blinks-dapp/tree/main/",
     docs: "https://solana.com/docs/advanced/actions",
   },
 };

@@ -1,4 +1,6 @@
 import { NavBar } from "../components/NavBar";
+import Head from "next/head";
+
 import {
   CoinsIcon,
   FileTextIcon,
@@ -50,8 +52,42 @@ const actionCards: Array<{
 export default function HomePage() {
   return (
     <div>
+      <Head>
+        <title>My Awesome Website</title>
+        <meta
+          name="description"
+          content="Welcome to my awesome website, where you can find amazing content and resources."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@KaktosSol" />
+        <meta name="twitter:title" content="My Awesome Website" />
+        <meta
+          name="twitter:description"
+          content="Welcome to my awesome website, where you can find amazing content and resources."
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/kaktosSMB.png`}
+        />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="My Awesome Website" />
+        <meta
+          property="og:description"
+          content="Welcome to my awesome website, where you can find amazing content and resources."
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}/kaktosSMB.png`}
+        />
+        <meta property="og:url" content="https://example.com" />
+        <meta property="og:type" content="website" />
+      </Head>
       <NavBar />
-      <h1>Welcome to Monster Verse</h1>
+      <h1>Welcome to my blinks test dapp</h1>
     </div>
   );
 }
