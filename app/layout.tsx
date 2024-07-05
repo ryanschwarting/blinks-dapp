@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Donate Solana",
   description:
-    "Support my developer journey on the solana blockchain by donating solana!",
+    "Support my developer journey on the solana blockchain by donating Solana!",
 };
 
 export default function RootLayout({
