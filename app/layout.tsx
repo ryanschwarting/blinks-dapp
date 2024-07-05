@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Donate Solana",
   description:
     "Support my developer journey on the solana blockchain by donating Solana!",
+  icons: "/solana.png",
 };
 
 export default function RootLayout({
