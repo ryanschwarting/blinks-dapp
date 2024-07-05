@@ -141,22 +141,15 @@ export const POST = async (req: Request) => {
     const payload: ActionPostResponse = await createPostResponse({
       fields: {
         transaction,
-        message: `Thank you for the donation! :) `,
+        message: `Thank you for the donation! :)`,
       },
       // note: no additional signers are needed
       // signers: [],
     });
 
-    // Adding the success message
-    // const successMessage = `Transaction successful! Sent ${amount} SOL to ${toPubkey.toBase58()}`;
-
-    return Response.json(
-      // { payload, successMessage },
-      payload,
-      {
-        headers: ACTIONS_CORS_HEADERS,
-      }
-    );
+    return Response.json(payload, {
+      headers: ACTIONS_CORS_HEADERS,
+    });
   } catch (err) {
     console.log(err);
     let message = "An unknown error occurred";
