@@ -26,11 +26,16 @@ export default function Pages() {
     >
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-          Transfer Native SOL
+          Donate Solana to Kaktos
         </h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          The following example demonstrates how to transfer native SOL to using
-          an Action.
+          I am embarking on an exciting journey, transitioning from an
+          experienced Ethereum developer to diving deep into the Solana
+          development ecosystem. Your generous support will empower me to
+          continue my studies and make meaningful contributions to this
+          innovative blockchain community. Together, we can drive the future of
+          decentralized technology. Thank you for supporting my growth and
+          learning!
         </p>
       </div>
 
