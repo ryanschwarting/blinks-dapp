@@ -54,13 +54,13 @@ export default function HomePage() {
     <div>
       <Head>
         <meta charSet="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/next.svg" />
+        <link rel="icon" type="image/svg+xml" href="/solana.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Blinks Dapp</title>
 
         {/* Twitter */}
         <meta property="twitter:title" content="Donate Solana"></meta>
-        <meta property="twitter:image" content={"/next.svg"}></meta>
+        <meta property="twitter:image" content={"/solana.svg"}></meta>
         <meta
           property="twitter:url"
           content="https://blinks-dapp.vercel.app/"
