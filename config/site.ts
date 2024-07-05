@@ -6,9 +6,8 @@ export const siteConfig = {
   url: "https://",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
-    twitter: "https://twitter.com/nickfrosty",
-    github:
-      "https://github.com/solana-developers/solana-actions/tree/main/examples/next-js",
+    twitter: "https://twitter.com/kaktosSol",
+    github: "https://github.com/ryanschwarting/monsterverse-dapp/tree/main/",
     docs: "https://solana.com/docs/advanced/actions",
   },
 };

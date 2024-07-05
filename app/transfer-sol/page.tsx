@@ -48,7 +48,7 @@ export default function Pages() {
         <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           View the{" "}
           <Link
-            href={`${siteConfig.links.github}/src/app${apiPath}/route.ts`}
+            href={`${siteConfig.links.github}/app${apiPath}/route.ts`}
             target="_blank"
           >
             <button className="text-blue-500 underline hover:text-blue-700">
