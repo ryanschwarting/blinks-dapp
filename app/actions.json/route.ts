@@ -5,11 +5,7 @@ export const GET = async () => {
     rules: [
       {
         pathPattern: "/transfer-sol",
-        apiPath: "https://blinks-dapp.vercel.app/api/actions/transfer-sol/*",
-      },
-      {
-        pathPattern: "/api/actions/**",
-        apiPath: "/api/actions/**",
+        apiPath: "/api/actions/transfer-sol",
       },
     ],
   };
