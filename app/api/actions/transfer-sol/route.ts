@@ -36,10 +36,11 @@ export const GET = async (req: Request) => {
     const payload: ActionGetResponse = {
       title: "Test Blink: Donate Solana",
       // icon: new URL("/solana_devs.jpg", requestUrl.origin).toString(),
-      icon: new URL(
-        "https://ncxjapaoaeumcr7zfntkk4xzqkfbbsrxnublxh66zfqfdbv6537a.arweave.net/aK6QPA4BKMFH-StmpXL5gooQyjdtAruf3slgUYa-7v4",
-        requestUrl.origin
-      ).toString(),
+      // icon: new URL(
+      //   "https://ncxjapaoaeumcr7zfntkk4xzqkfbbsrxnublxh66zfqfdbv6537a.arweave.net/aK6QPA4BKMFH-StmpXL5gooQyjdtAruf3slgUYa-7v4",
+      //   requestUrl.origin
+      // ).toString(),
+      icon: new URL("/kaktosSMB", new URL(req.url).origin).toString(),
       description:
         "Blockchain Dev | Support my journey into Solana development by making a donation!",
       label: "Transfer", // this value will be ignored since `links.actions` exists
