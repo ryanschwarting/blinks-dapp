@@ -108,10 +108,13 @@ export const POST = async (req: Request) => {
         headers: ACTIONS_CORS_HEADERS,
       });
     }
+    const SOLANA_RPC_URL = process.env.SOLANA_RPC_URL!;
+    if (!SOLANA_RPC_URL) throw "Unable to find RPC url";
+    const connection = new Connection(SOLANA_RPC_URL);
 
-    const connection = new Connection(
-      process.env.SOLANA_RPC! || clusterApiUrl("devnet")
-    );
+    // const connection = new Connection(
+    //   process.env.SOLANA_RPC! || clusterApiUrl("devnet")
+    // );
 
     // ensure the receiving account will be rent exempt
     const minimumBalance = await connection.getMinimumBalanceForRentExemption(
