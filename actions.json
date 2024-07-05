@@ -1,8 +1,8 @@
 {
   "rules": [
     {
-      "pathPattern": "/**",
-      "apiPath": "/**"
+      "pathPattern": "/donate/*",
+      "apiPath": "https://monsterverse-dapp.vercel.app/api/actions/transfer-sol/*"
     }
   ]
 }
