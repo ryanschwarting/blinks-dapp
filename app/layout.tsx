@@ -9,6 +9,26 @@ export const metadata: Metadata = {
   title: "Blinks dApp",
   description:
     "Support my developer journey on the solana blockchain by donating Solana!",
+  openGraph: {
+    title: "Blinks dApp",
+    description:
+      "Support my developer journey on the solana blockchain by donating Solana!",
+    url: "https://blinks-dapp.vercel.app/",
+    siteName: "Blinks dApp",
+    images: [
+      {
+        url: "/kaktosSMB.png",
+        width: 1260,
+        height: 800,
+      },
+    ],
+  },
+  twitter: {
+    site: `https://x.com/`,
+    creator: `https://x.com/KaktosSol`,
+    card: "summary",
+  },
+  category: "blockchain",
   icons: "/kaktosSMB.png",
 };
 
