@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -82,18 +81,8 @@ function Footer() {
   //     }
   //   };
 
-  const footerAnimation = {
-    hidden: { y: "100vh" },
-    visible: { y: 0, transition: { duration: 2 } },
-  };
-
   return (
-    <motion.div
-      className="flex justify-center items-center px-2 md:px-0 overflow-hidden"
-      initial="hidden"
-      animate="visible"
-      variants={footerAnimation}
-    >
+    <div className="flex justify-center items-center px-2 md:px-0">
       <div className="bg-[#9945FF] p-10 w-full max-w-6xl mt-24 rounded-t-xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
@@ -184,7 +173,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
