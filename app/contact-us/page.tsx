@@ -182,7 +182,7 @@ export default function Pages() {
             />
           </div>
 
-          <div className="w-full flex justify-between items-center space-x-4">
+          <div className="w-full flex flex-col items-end md:flex-row md:justify-between space-y-4 md:space-y-0">
             {submitted && (
               <div className="w-[160px] h-[32px] flex justify-center items-center font-semibold text-[12px] text-[#14F195] bg-[#9945FF] border-l-2 border-l-[#14F195]">
                 Submitted Successfully!
