@@ -89,7 +89,7 @@ function Footer() {
 
   return (
     <motion.div
-      className="flex justify-center items-center px-2 md:px-0"
+      className="flex justify-center items-center px-2 md:px-0 overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={footerAnimation}
