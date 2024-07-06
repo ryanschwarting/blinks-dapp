@@ -20,10 +20,10 @@ export default function Pages() {
   return (
     <section id="action" className="space-y-2 md:space-y-8 p-2 px-4 md:px-20">
       <div className="mx-auto flex w-full md:max-w-[58rem] flex-col items-center space-y-6 text-center pt-4 md:pt-0">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
+        <h2 className="font-heading text-[32px] leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Donate Solana to Kaktos
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 text-white pb-4 md:pb-0">
+        <p className="max-w-[85%] font-light leading-normal text-muted-foreground text-sm md:text-[16px]  text-white pb-4 md:pb-0">
           I am embarking on an exciting journey, transitioning from an
           experienced Ethereum developer to diving deep into the Solana
           development ecosystem. Your generous support will empower me to
@@ -55,7 +55,7 @@ export default function Pages() {
       </div>
 
       <div className="mx-auto text-center max-w-[85%] pt-4 md:pt-0">
-        <p className="text-white leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="text-white leading-normal text-muted-foreground text-sm md:text-[16px]">
           View the{" "}
           <Link
             href={`${siteConfig.links.github}/app${apiPath}/route.ts`}
@@ -75,7 +75,7 @@ export default function Pages() {
             Action Endpoint
           </h3>
         </div>
-        <div className="pt-4 space-y-2 text-[14px] md:text-lg">
+        <div className="pt-4 space-y-2 text-sm md:text-[16px]">
           <p className="text-muted-foreground">
             <Link
               href={apiEndpoint}

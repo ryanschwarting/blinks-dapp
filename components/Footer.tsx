@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 function Footer() {
   const path = usePathname();
@@ -28,58 +29,58 @@ function Footer() {
     { link: "https://github.com/ryanschwarting", icon: <FaGithub size={24} /> },
   ];
 
-  //   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //     event.preventDefault();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  //     const PORTAL_ID = "46292874";
-  //     const FORM_ID = "142a3626-b366-4032-b736-17b226bb4654";
+    const PORTAL_ID = "46694864";
+    const FORM_ID = "d9176a2e-ccfe-4eba-96ae-8dc5ca7d74da";
 
-  //     if (!email) {
-  //       console.error("Form fields are missing");
-  //       return;
-  //     }
+    if (!email) {
+      console.error("Form fields are missing");
+      return;
+    }
 
-  //     const requestBody = {
-  //       portalId: PORTAL_ID,
-  //       formGuid: FORM_ID,
-  //       fields: [
-  //         {
-  //           name: "email",
-  //           value: email,
-  //         },
-  //       ],
-  //     };
+    const requestBody = {
+      portalId: PORTAL_ID,
+      formGuid: FORM_ID,
+      fields: [
+        {
+          name: "email",
+          value: email,
+        },
+      ],
+    };
 
-  //     try {
-  //       const response = await fetch(
-  //         `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`,
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify(requestBody),
-  //         }
-  //       );
+    try {
+      const response = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
-  //       if (response.ok) {
-  //         console.log("Form submission successful");
-  //         setMessage("Subscription successful");
-  //         setEmail(""); // Reset the email field
-  //         setTimeout(() => {
-  //           setMessage("");
-  //         }, 3000);
-  //       } else {
-  //         console.error("Form submission error");
-  //         const responseData = await response.json();
-  //         console.error(responseData);
-  //         setMessage("Subscription failed");
-  //       }
-  //     } catch (error) {
-  //       console.error("There was an error submitting the form", error);
-  //       setMessage("Subscription failed");
-  //     }
-  //   };
+      if (response.ok) {
+        console.log("Form submission successful");
+        setMessage("Subscription successful");
+        setEmail(""); // Reset the email field
+        setTimeout(() => {
+          setMessage("");
+        }, 3000);
+      } else {
+        console.error("Form submission error");
+        const responseData = await response.json();
+        console.error(responseData);
+        setMessage("Subscription failed");
+      }
+    } catch (error) {
+      console.error("There was an error submitting the form", error);
+      setMessage("Subscription failed");
+    }
+  };
 
   return (
     <div className="flex justify-center items-center px-2 md:px-0">
@@ -95,25 +96,35 @@ function Footer() {
               </p>
               <a
                 href="mailto:0xKaktos@gmail.com"
-                className="text-[#14F195] mt-4 inline-block underline text-[14px] tracking-tight transform transition-transform duration-300 hover:scale-95"
+                className="text-[#14F195] mt-4 inline-block text-[14px] tracking-tight "
               >
-                0xKaktos@gmail.com
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                >
+                  0xKaktos@gmail.com
+                </motion.button>
               </a>
               <a
-                className="mt-4 text-black text-[14px] tracking-tight transform transition-transform duration-300 hover:scale-95 hover:text-[#14F195]"
+                className="mt-4 text-[#14F195] text-[14px] tracking-tight  "
                 href="/contact-us"
               >
-                Contact Form
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                >
+                  Contact Form
+                </motion.button>
               </a>
             </div>
           </div>
 
           <div className="w-full lg:w-1/3">
-            <h2 className="ml-1 font-normal text-black text-[13px] tracking-tight leading-[20px]">
+            <h2 className="ml-0 md:ml-1 font-normal text-black text-[13px] tracking-tight leading-[20px]">
               Subscribe Now
             </h2>
             <form
-              //   onSubmit={handleSubmit}
+              onSubmit={handleSubmit}
               className="flex mt-4 items-center bg-white rounded-full p-1 pr-1"
             >
               <input
@@ -124,14 +135,15 @@ function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                disabled
                 type="submit"
                 className="bg-[#14F195] text-black font-medium text-[16px] leading-[24px] tracking-tight px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-95"
               >
                 Send
               </button>
             </form>
-            {message && <p>{message}</p>}
+            {message && (
+              <p className="text-[#14F195] text-[12px] mt-2">{message}</p>
+            )}
             {/* <div className="flex justify-between px-2 pt-2 md:px-0 md:pt-0 md:justify-start lg:gap-12 lg:mt-4">
               <div>
                 <ul>
@@ -181,9 +193,10 @@ function Footer() {
           <div className="text-black text-[12px] md:text-sm justify-center space-x-4">
             <ul className="flex space-x-6">
               {dataSocial.map((item, index) => (
-                <li
+                <motion.li
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
                   key={index}
-                  className="transform transition-transform duration-300 hover:scale-95"
                 >
                   <a
                     href={item.link}
@@ -193,7 +206,7 @@ function Footer() {
                   >
                     {item.icon}
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>

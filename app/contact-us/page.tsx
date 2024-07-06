@@ -41,7 +41,7 @@ export default function Pages() {
 
     try {
       const response = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/46292874/5137b4cd-52d1-430e-8d79-dccca65f2f68`,
+        `https://api.hsforms.com/submissions/v3/integration/submit/46694864/19ab94d9-652c-4c9b-81b6-4e2d28341567`,
         {
           method: "POST",
           headers: {
@@ -181,7 +181,13 @@ export default function Pages() {
               required
             />
           </div>
-          <div className="w-full flex justify-end items-center space-x-4">
+
+          <div className="w-full flex justify-between items-center space-x-4">
+            {submitted && (
+              <div className="w-[160px] h-[32px] flex justify-center items-center font-semibold text-[12px] text-[#14F195] bg-[#9945FF] border-l-2 border-l-[#14F195]">
+                Submitted Successfully!
+              </div>
+            )}
             <button
               type="submit"
               className="bg-[#14F195] text-black py-2 px-6 h-[44px] rounded-full flex items-center"
@@ -193,11 +199,6 @@ export default function Pages() {
             </button>
           </div>
         </form>
-        {submitted && (
-          <div className="w-[160px] h-[24px] flex justify-center items-center font-semibold text-[12px] text-[#14F195] bg-white border-l-2 border-l-[#14F195]">
-            Submitted Successfully!
-          </div>
-        )}
       </div>
     </div>
   );

@@ -49,7 +49,7 @@
 // };
 
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import solanaLogo from "@/assets/images/solanaLogo.png";
 import kaktos from "@/assets/images/kaktosSMB.png";
 import Image from "next/image";
@@ -71,6 +71,23 @@ export const NavBar: React.FC = () => {
   const router = useRouter();
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <nav className="space-y-2 md:space-y-8 p-2 px-4 md:px-20">
@@ -85,6 +102,7 @@ export const NavBar: React.FC = () => {
           />
         </Link>
         <motion.div
+          ref={dropdownRef}
           initial={false}
           animate={isOpen ? "open" : "closed"}
           className="relative"
@@ -101,7 +119,7 @@ export const NavBar: React.FC = () => {
               alt="SMB"
               className="rounded-full"
             />
-            <motion.div
+            {/* <motion.div
               variants={{
                 open: { rotate: 180 },
                 closed: { rotate: 0 },
@@ -113,7 +131,7 @@ export const NavBar: React.FC = () => {
               <svg width="15" height="15" viewBox="0 0 20 20">
                 <path d="M0 7 L 20 7 L 10 16" />
               </svg>
-            </motion.div>
+            </motion.div> */}
           </motion.button>
           <motion.ul
             variants={{
@@ -137,9 +155,11 @@ export const NavBar: React.FC = () => {
               },
             }}
             style={{ pointerEvents: isOpen ? "auto" : "none" }}
-            className="absolute top-full left-1/2 transform -translate-x-1/2 z-50 text-[14px] mt-2 bg-[#9945FF] text-black rounded-lg shadow-lg w-[150px] flex flex-col justify-center items-center"
+            className="absolute top-full left-0 md:left-1/2 transform -translate-x-1/2 z-50 text-[12px] md:text-[14px] mt-2 bg-[#9945FF] text-black rounded-lg shadow-lg w-[100px] md:w-[150px] flex flex-col justify-center items-center"
           >
             <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
               variants={itemVariants}
               className="p-2 hover:text-[#14F195]"
             >
@@ -152,6 +172,8 @@ export const NavBar: React.FC = () => {
               </a>
             </motion.li>
             <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
               variants={itemVariants}
               className="p-2 hover:text-[#14F195]"
             >
@@ -164,6 +186,8 @@ export const NavBar: React.FC = () => {
               </a>
             </motion.li>
             <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
               variants={itemVariants}
               className="p-2 hover:text-[#14F195]"
             >
@@ -175,7 +199,7 @@ export const NavBar: React.FC = () => {
                 LinkedIn
               </a>
             </motion.li>
-            <motion.li
+            {/* <motion.li
               variants={itemVariants}
               className="p-2 hover:text-[#14F195]"
             >
@@ -186,8 +210,10 @@ export const NavBar: React.FC = () => {
               >
                 Tensor
               </a>
-            </motion.li>
+            </motion.li> */}
             <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
               variants={itemVariants}
               className="p-2 hover:text-[#14F195]"
             >
