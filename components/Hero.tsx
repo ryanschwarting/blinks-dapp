@@ -26,13 +26,13 @@ export const Hero: React.FC = () => {
   return (
     <div className="p-4 h-[500px] flex">
       <div className="max-w-7xl mx-auto flex justify-between h-full">
-        <div className="flex flex-col items-center gap-8 ">
+        <div className="flex flex-col items-center gap-8 md:gap-8 ">
           <h1 className="text-white text-[20px] md:text-[24px]">
             Check out my list of blink examples!
           </h1>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-10">
             <motion.div
-              className="border-2 border-[#14F195] p-10 flex flex-col justify-between gap-10 rounded-lg"
+              className="border-2 border-[#14F195] p-5 md:p-10 flex flex-col justify-between gap-10 rounded-lg"
               initial="hidden"
               animate="visible"
               variants={leftAnimation}
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
               <Link href={"/transfer-sol"}>
                 <button
                   onClick={handleButtonClick}
-                  className="bg-[#14F195] text-black py-2 px-4 rounded transition-transform duration-300 hover:scale-95 flex justify-center items-center"
+                  className="bg-[#14F195] text-black text-[14px] py-2 px-4 rounded transition-transform duration-300 hover:scale-95 flex justify-center items-center"
                 >
                   Donation Blink{" "}
                   <span className="text-[20px] text-black ml-2 ">
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
               </Link>
             </motion.div>
             <motion.div
-              className="border-2 border-[#14F195] p-10 flex flex-col justify-between gap-10 rounded-lg"
+              className="border-2 border-[#14F195] p-5 md:p-10 flex flex-col justify-between gap-10 rounded-lg"
               initial="hidden"
               animate="visible"
               variants={rightAnimation}
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
               <button
                 disabled
                 onClick={handleButtonClick}
-                className="bg-[#14F195] text-black py-2 px-4 rounded transition-transform duration-300 hover:scale-95 flex justify-center items-center"
+                className="bg-[#14F195] text-black text-[14px] py-2 px-4 rounded transition-transform duration-300 hover:scale-95 flex justify-center items-center"
               >
                 NFT Mint Blink{" "}
                 <span className="text-[20px] text-black ml-2 ">
