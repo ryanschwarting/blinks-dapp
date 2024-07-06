@@ -6,10 +6,10 @@ import { NavBar } from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blinks Dapp",
+  title: "Blinks dApp",
   description:
     "Support my developer journey on the solana blockchain by donating Solana!",
-  icons: "/solana.svg",
+  icons: "/kaktosSMB.png",
 };
 
 export default function RootLayout({
