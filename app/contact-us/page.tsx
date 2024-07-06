@@ -84,7 +84,7 @@ export default function Pages() {
               className="block text-white mb-2 font-medium text-[12px] lg:text-[16px]"
               htmlFor="firstName"
             >
-              First Name
+              First Name *
             </label>
             <input
               type="text"
@@ -92,7 +92,7 @@ export default function Pages() {
               name="firstName"
               value={formState.firstName}
               onChange={handleChange}
-              className="p-2 rounded-xl w-full h-[44px]"
+              className="p-2 rounded-xl w-full h-[44px] text-black"
               required
             />
           </div>
@@ -101,7 +101,7 @@ export default function Pages() {
               className="block text-white mb-2 font-medium text-[12px] lg:text-[16px]"
               htmlFor="lastName"
             >
-              Last Name
+              Last Name *
             </label>
             <input
               type="text"
@@ -109,7 +109,7 @@ export default function Pages() {
               name="lastName"
               value={formState.lastName}
               onChange={handleChange}
-              className="p-2 rounded-xl w-full h-[44px]"
+              className="p-2 rounded-xl w-full h-[44px] text-black"
               required
             />
           </div>
@@ -118,7 +118,7 @@ export default function Pages() {
               className="block text-white mb-2 font-medium text-[12px] lg:text-[16px]"
               htmlFor="email"
             >
-              Email
+              Email *
             </label>
             <input
               type="email"
@@ -126,7 +126,7 @@ export default function Pages() {
               name="email"
               value={formState.email}
               onChange={handleChange}
-              className="p-2 rounded-xl w-full h-[44px]"
+              className="p-2 rounded-xl w-full h-[44px] text-black"
               required
             />
           </div>
@@ -135,7 +135,7 @@ export default function Pages() {
               className="block text-white mb-2 font-medium text-[12px] lg:text-[16px]"
               htmlFor="mobile"
             >
-              Mobile{" "}
+              Mobile
               <span className="text-white text-opacity-60">(Optional)</span>
             </label>
             <input
@@ -144,7 +144,7 @@ export default function Pages() {
               name="mobile"
               value={formState.mobile}
               onChange={handleChange}
-              className="p-2 rounded-xl w-full h-[44px]"
+              className="p-2 rounded-xl w-full h-[44px] text-black"
             />
           </div>
           <div className="w-full">
@@ -161,7 +161,7 @@ export default function Pages() {
               name="company"
               value={formState.company}
               onChange={handleChange}
-              className="p-2 rounded-xl w-full h-[44px]"
+              className="p-2 rounded-xl w-full h-[44px] text-black"
             />
           </div>
           <div className="w-full">
@@ -169,7 +169,7 @@ export default function Pages() {
               className="block text-white mb-2 font-medium text-[12px] lg:text-[16px]"
               htmlFor="message"
             >
-              Message
+              Message *
             </label>
             <textarea
               id="message"
@@ -177,7 +177,7 @@ export default function Pages() {
               placeholder="Type your message"
               value={formState.message}
               onChange={handleChange}
-              className="p-2 w-full h-48 rounded-xl"
+              className="p-2 w-full h-48 rounded-xl text-black"
               required
             />
           </div>

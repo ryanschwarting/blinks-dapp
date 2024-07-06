@@ -86,18 +86,26 @@ function Footer() {
       <div className="bg-[#9945FF] p-10 w-full max-w-6xl mt-24 rounded-t-xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
-            <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight mt-4">
-              Contact me directly via
-            </p>
-            <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight">
-              email with any questions
-            </p>
-            <a
-              href="mailto:0xKaktos@gmail.com"
-              className="text-[#14F195] mt-4 inline-block underline text-[14px] tracking-tight transform transition-transform duration-300 hover:scale-95"
-            >
-              0xKaktos@gmail.com
-            </a>
+            <div className="flex flex-col">
+              <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight mt-4">
+                Contact me directly via email
+              </p>
+              <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight">
+                or form with any questions
+              </p>
+              <a
+                href="mailto:0xKaktos@gmail.com"
+                className="text-[#14F195] mt-4 inline-block underline text-[14px] tracking-tight transform transition-transform duration-300 hover:scale-95"
+              >
+                0xKaktos@gmail.com
+              </a>
+              <a
+                className="mt-4 text-black text-[14px] tracking-tight transform transition-transform duration-300 hover:scale-95 hover:text-[#14F195]"
+                href="/contact-us"
+              >
+                Contact Form
+              </a>
+            </div>
           </div>
 
           <div className="w-full lg:w-1/3">
@@ -124,7 +132,7 @@ function Footer() {
               </button>
             </form>
             {message && <p>{message}</p>}
-            <div className="flex justify-between px-2 pt-2 md:px-0 md:pt-0 md:justify-start lg:gap-12 lg:mt-4">
+            {/* <div className="flex justify-between px-2 pt-2 md:px-0 md:pt-0 md:justify-start lg:gap-12 lg:mt-4">
               <div>
                 <ul>
                   {dataCompany.map((item, index) => (
@@ -163,13 +171,31 @@ function Footer() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between items-center border-t pt-2 border-white">
-          <p className="text-black text-sm sm:mb-0">&copy; 2024 Kaktos</p>
-          <div className="text-black text-sm flex justify-center space-x-4">
-            <p>All rights reserved.</p>
+        <div className="flex flex-row justify-between items-center border-t pt-4 border-white">
+          <p className="text-black text-[10px] md:text-sm sm:mb-0 mr-2">
+            &copy; 2024 Kaktos. All rights reserved.
+          </p>
+          <div className="text-black text-[12px] md:text-sm justify-center space-x-4">
+            <ul className="flex space-x-6">
+              {dataSocial.map((item, index) => (
+                <li
+                  key={index}
+                  className="transform transition-transform duration-300 hover:scale-95"
+                >
+                  <a
+                    href={item.link}
+                    className="font-normal text-black text-[16px] md:text-[14px] tracking-tight leading-[20px] hover:text-[#14F195]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
