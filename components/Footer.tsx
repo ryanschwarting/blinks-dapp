@@ -82,7 +82,7 @@ function Footer() {
   //   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center px-2 md:px-0">
       <div className="bg-[#9945FF] p-10 w-full max-w-6xl mt-24 rounded-t-xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
