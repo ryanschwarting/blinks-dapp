@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -81,8 +82,18 @@ function Footer() {
   //     }
   //   };
 
+  const footerAnimation = {
+    hidden: { y: "100vh" },
+    visible: { y: 0, transition: { duration: 2 } },
+  };
+
   return (
-    <div className="flex justify-center items-center px-2 md:px-0">
+    <motion.div
+      className="flex justify-center items-center px-2 md:px-0"
+      initial="hidden"
+      animate="visible"
+      variants={footerAnimation}
+    >
       <div className="bg-[#9945FF] p-10 w-full max-w-6xl mt-24 rounded-t-xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
@@ -116,6 +127,7 @@ function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
+                disabled
                 type="submit"
                 className="bg-[#14F195] text-black font-medium text-[16px] leading-[24px] tracking-tight px-4 py-2 rounded-full transform transition-transform duration-300 hover:scale-95"
               >
@@ -172,7 +184,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

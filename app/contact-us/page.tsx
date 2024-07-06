@@ -63,7 +63,7 @@ export default function Pages() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+    <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
       <div className="flex flex-col p-4 md:p-4 lg:p-0 items-center space-y-4 md:space-y-0 md:items-start">
         <h2 className="font-poppins text-white font-medium lg:text-[38px] text-[24px] pb-4 relative">
           Write Me
@@ -71,7 +71,7 @@ export default function Pages() {
         </h2>
         <a
           href="mailto:0xKaktos@gmail.com"
-          className="text-[#14F195] mt-4 inline-block underline text-[14px] md:text-[18px] tracking-tight transform transition-transform duration-300 hover:scale-95"
+          className="text-[#14F195] pt-8 inline-block underline text-[14px] md:text-[18px] tracking-tight transform transition-transform duration-300 hover:scale-95"
         >
           0xKaktos@gmail.com
         </a>
