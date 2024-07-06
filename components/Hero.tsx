@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
                 className=" text-black md:text-[16px] py-2 px-4 rounded flex justify-center items-center"
               >
                 <span
-                  onClick={handleButtonClick}
+                  // onClick={handleButtonClick}
                   className="text-[24px] md:text-[32px] text-[#14F195] ml-2 "
                 >
                   <FaLongArrowAltRight />
