@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    site: `https://x.com/`,
-    creator: `https://x.com/KaktosSol`,
+    site: `@KaktosSol`,
+    creator: `@KaktosSol`,
     card: "summary",
   },
   category: "blockchain",
