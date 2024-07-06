@@ -86,16 +86,11 @@ function Footer() {
       <div className="bg-[#9945FF] p-10 w-full max-w-6xl mt-24 rounded-t-xl">
         <div className="flex flex-wrap justify-between mb-8">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
-            {/* <Image
-              src={LogoWhiteIcon}
-              alt="Tourflow logo"
-              className="w-[100px] h-[25px]"
-            /> */}
             <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight mt-4">
               Contact me directly via
             </p>
             <p className="font-normal text-[14px] text-black leading-[20px] tracking-tight">
-              email with any questions!
+              email with any questions
             </p>
             <a
               href="mailto:0xKaktos@gmail.com"
@@ -170,29 +165,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between items-center border-t pt-4 border-white">
-          <p className="text-black text-sm mb-2 sm:mb-0">
-            &copy; 2024 Kaktos Blinks. All rights reserved.
-          </p>
+        <div className="flex flex-col sm:flex-row justify-between items-center border-t pt-2 border-white">
+          <p className="text-black text-sm sm:mb-0">&copy; 2024 Kaktos</p>
           <div className="text-black text-sm flex justify-center space-x-4">
-            <a
-              href="/terms_of_use"
-              className="mx-2 transform transition-transform duration-300 hover:scale-95"
-            >
-              Terms
-            </a>
-            <a
-              href="/privacy_policy"
-              className="mx-2 transform transition-transform duration-300 hover:scale-95"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="/cookies_policy"
-              className="mx-2 transform transition-transform duration-300 hover:scale-95"
-            >
-              Cookies
-            </a>
+            <p>All rights reserved.</p>
           </div>
         </div>
       </div>
