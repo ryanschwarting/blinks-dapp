@@ -14,17 +14,17 @@ export const Hero: React.FC = () => {
   };
 
   const leftAnimation = {
-    hidden: { x: "-100vw" },
+    hidden: { x: "-100vh" },
     visible: { x: 0, transition: { duration: 2 } },
   };
 
   const rightAnimation = {
-    hidden: { x: "100vw" },
+    hidden: { x: "100vh" },
     visible: { x: 0, transition: { duration: 2 } },
   };
 
   return (
-    <div className="p-4 h-[500px] flex">
+    <div className="p-4 h-[500px] flex overflow-hidden">
       <div className="max-w-7xl mx-auto flex justify-between h-full">
         <div className="flex flex-col items-center gap-8 md:gap-8 ">
           <h1 className="text-white text-[20px] md:text-[24px]">
