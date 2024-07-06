@@ -12,10 +12,10 @@ function Footer() {
   const [message, setMessage] = useState("");
 
   const dataCompany = [
-    { link: "/about_us", name: "About Us" },
-    { link: "/contact_us", name: "Contact Us" },
+    { link: "/about_us", name: "About" },
+    { link: "/contact-us", name: "Contact" },
     { link: "/faqs", name: "FAQ" },
-    { link: "/blogs", name: "Blog" },
+    { link: "https://solana.com/docs", name: "Documentation" },
   ];
 
   const dataSocial = [
@@ -139,6 +139,8 @@ function Footer() {
                       <Link
                         href={item.link}
                         className="font-normal text-black text-[14px] md:text-[14px] tracking-tight leading-[20px]"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {item.name}
                       </Link>

@@ -2,11 +2,8 @@
 
 import { SolanaQRCode } from "@/components/qr-code";
 import Link from "next/link";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { useEffect, useState } from "react";
-import solanaLogo from "@/assets/images/solanaLogo.png";
-import kaktos from "@/assets/images/kaktosSMB.png";
 
 export default function Pages() {
   const apiPath = "/api/actions/transfer-sol";
@@ -22,22 +19,6 @@ export default function Pages() {
 
   return (
     <section id="action" className="space-y-2 md:space-y-8 p-2 px-4 md:px-20">
-      {/* <div className="flex justify-between items-center h-[50px] md:h-[100px]">
-        <Image
-          src={solanaLogo}
-          width={300}
-          height={300}
-          alt="SolanaLogo"
-          className="w-[200px] h-[30px] md:w-[300px] md:h-[50px]"
-        />
-        <Image
-          src={kaktos}
-          width={100}
-          height={100}
-          alt="SMB"
-          className="rounded-full h-[45px] w-[45px] md:w-[100px] md:h-[100px]"
-        />
-      </div> */}
       <div className="mx-auto flex w-full md:max-w-[58rem] flex-col items-center space-y-6 text-center pt-4 md:pt-0">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
           Donate Solana to Kaktos

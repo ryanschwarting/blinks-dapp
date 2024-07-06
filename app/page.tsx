@@ -85,7 +85,6 @@ export default function HomePage() {
         ></meta>
         <meta property="og:type" content="website"></meta>
       </Head>
-      {/* <NavBar /> */}
       <Hero />
     </div>
   );

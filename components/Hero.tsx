@@ -13,10 +13,12 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <nav className="p-4 h-[500px] flex justify-center">
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-full">
-        <div className="flex flex-col justify-center items-center gap-8 ">
-          <h1 className="text-white">Check out my list of blink examples!</h1>
+    <div className="p-4 h-[500px] flex">
+      <div className="max-w-7xl mx-auto flex justify-between h-full">
+        <div className="flex flex-col items-center gap-8 ">
+          <h1 className="text-white text-[20px] md:text-[24px]">
+            Check out my list of blink examples!
+          </h1>
 
           <Link href={"/transfer-sol"}>
             <button
@@ -31,6 +33,6 @@ export const Hero: React.FC = () => {
           </Link>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
