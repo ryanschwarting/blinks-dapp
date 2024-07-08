@@ -95,10 +95,10 @@ export const NavBar: React.FC = () => {
         <Link href="/">
           <Image
             src={solanaLogo}
-            width={300}
-            height={300}
+            width={200}
+            height={200}
             alt="SolanaLogo"
-            className="w-[200px] h-[30px] md:w-[300px] md:h-[50px] transform transition-transform duration-300 hover:scale-95"
+            className="transform transition-transform duration-300 hover:scale-95"
           />
         </Link>
         <motion.div
@@ -110,14 +110,14 @@ export const NavBar: React.FC = () => {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-full h-[45px] w-[45px] md:w-[90px] md:h-[90px] transform transition-transform duration-300 hover:scale-95"
+            className="rounded-full h-[45px] w-[45px] md:w-[90px] md:h-[90px]"
           >
             <Image
               src={kaktos}
-              width={100}
-              height={100}
+              width={75}
+              height={75}
               alt="SMB"
-              className="rounded-full"
+              className="rounded-full transform transition-transform duration-300 hover:scale-95"
             />
             {/* <motion.div
               variants={{
@@ -155,7 +155,7 @@ export const NavBar: React.FC = () => {
               },
             }}
             style={{ pointerEvents: isOpen ? "auto" : "none" }}
-            className="absolute top-full left-0 md:left-1/2 transform -translate-x-1/2 z-50 text-[12px] md:text-[14px] mt-2 bg-[#9945FF] text-black rounded-lg shadow-lg w-[100px] md:w-[150px] flex flex-col justify-center items-center"
+            className="absolute top-full left-0 md:left-1/2 transform -translate-x-1/2 z-50 text-[12px] md:text-[14px]  bg-[#9945FF] text-black rounded-lg shadow-lg w-[100px] md:w-[150px] flex flex-col justify-center items-center"
           >
             <motion.li
               whileHover={{ scale: 1.1 }}

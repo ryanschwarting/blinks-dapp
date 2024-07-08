@@ -99,7 +99,7 @@ function Footer() {
                 className="text-[#14F195] mt-4 inline-block text-[14px] tracking-tight "
               >
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.8 }}
                 >
                   0xKaktos@gmail.com
@@ -110,7 +110,7 @@ function Footer() {
                 href="/contact-us"
               >
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.8 }}
                 >
                   Contact Form
@@ -194,7 +194,7 @@ function Footer() {
             <ul className="flex space-x-6">
               {dataSocial.map((item, index) => (
                 <motion.li
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 0.9 }}
                   whileTap={{ scale: 0.8 }}
                   key={index}
                 >
