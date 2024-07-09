@@ -24,9 +24,9 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="h-[500px] flex overflow-hidden p-4 ">
-      <div className="max-w-7xl mx-auto flex justify-between h-full">
-        <div className="flex flex-col md:flex-col lg:flex-row justify-center gap-0 md:gap-4 lg:gap-0 md:justify-center lg:justify-between items-center border border-[#14F195] w-[350px] md:w-[600px] lg:w-[900px] px-10 rounded-xl shadow-2xl shadow-[#9945FF]">
+    <div className="h-[500px] flex overflow-hidden p-4">
+      <div className="max-w-7xl mx-auto flex justify-between h-full pb-4 md:pb-10 ">
+        <div className="flex flex-col md:flex-col lg:flex-row justify-center gap-0 md:gap-4 lg:gap-0 md:justify-center lg:justify-between items-center border border-[#14F195] w-[350px] md:w-[600px] lg:w-[900px] px-10 rounded-xl shadow-xl  shadow-[#9945FF]">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
